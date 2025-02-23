@@ -14,7 +14,7 @@ public class Author {
   
   //RELATIONSHIPS
   @OneToOne(cascade = CascadeType.ALL)
-  @JoinColumn(name = "addressFk")
+  @JoinColumn(name = "addressFk", insertable = false, updatable = false)
   public Address address;
 
 }
