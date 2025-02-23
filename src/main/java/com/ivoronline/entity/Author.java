@@ -11,11 +11,10 @@ public class Author {
   public Integer id;
   public String  name;
   public Integer age;
-  public Integer addressId;  //FK to Address
   
   //RELATIONSHIPS
   @OneToOne(cascade = CascadeType.ALL)
-  @JoinColumn(name = "addressId", insertable = false, updatable = false) //referencedColumnName
+  @JoinColumn(name = "addressFk")
   public Address address;
 
 }
